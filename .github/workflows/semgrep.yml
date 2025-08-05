@@ -25,7 +25,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Run Semgrep(backedn-auth)
-        run: semgrep --config p/gosec --config p/golang --config p/security-audit . --sarif --output=semgrep.sarif
+        run: semgrep --config p/gosec --config p/golang --config p/security-audit . --sarif-output=semgrep.sarif
       # semgrep 결과 gihub ui로 확인 가능
       - name: Upload SARIF results to GitHub
         uses: github/codeql-action/upload-sarif@v3
