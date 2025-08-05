@@ -34,4 +34,6 @@ jobs:
         uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: semgrep.sarif
+      - name: Print SARIF result for debugging (optional)
         run: cat semgrep.sarif | jq
+
